@@ -1,0 +1,26 @@
+{
+  "name": "@vizv/module-openldap",
+  "devDependencies": {
+    "@types/node": "^10.0.0",
+    "typescript": "^3.7.7"
+  },
+  "dependencies": {
+    "@pulumi/kubernetes": "^3.0.0",
+    "@pulumi/pulumi": "^3.0.0",
+    "@vizv/crds-cert-manager": "^1.0.2",
+    "@vizv/provider-random": "^1.0.0",
+    "@vizv/pulumi-utilities": "^1.1.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prepack": "npm run build",
+    "postpack": "rm -rf dist"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0"
+}
